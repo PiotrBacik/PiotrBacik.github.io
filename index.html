@@ -5,15 +5,40 @@
 
 	<style>
 		.container {
-			max-width: 800px;
-			padding: 1rem;
-			margin: 0 auto;
+		    max-width: 800px;
+		    padding: 1rem;
+		    margin: 0 auto;
 		}
-		.box { display: flex;
-		justify-content: space-between;
-		gap: 20px;}
-		.imageflexcontent {float: right;}
-		.contact {margin-left: 0;}
+
+		.box {
+		    display: flex;
+		    justify-content: space-between;
+		    gap: 20px;
+		}
+
+		.contact {
+		    flex: 1;
+		}
+
+		.imageflexcontent {
+		    width: 250px;
+		    height: auto;
+		    object-fit: contain;
+		    align-self: flex-start;
+		}
+
+		/* Phones and narrow screens */
+		@media (max-width: 600px) {
+		    .box {
+		        flex-direction: column;
+		    }
+		
+		    .imageflexcontent {
+		        width: 250px;
+		        max-width: 100%;
+		        align-self: center;
+		    }
+		}
 	</style>
 
 	</head>
